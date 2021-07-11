@@ -1,0 +1,11 @@
+Blind SQL injection with time delays
+
+Uses tracking id and cookies
+
+table name users: username, password
+
+Find administrator password and log in
+
+END GOAL: Prove that website is vulnerable to time delayed Blind SQL injection
+
+|| (SELECT pg_sleep(10))--
