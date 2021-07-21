@@ -1,0 +1,10 @@
+1. Get CSRF
+https://target-acee1f941ff8b22d80b86c2400b90061.web-security-academy.net/post?postId=5 
+csrf=GdzFScyWnD8hOMordg4W5apjosz8RNUD&postId=2
+comment=swatiswatiswati
+name=swati
+email=swati%40gmail.com
+
+https://target-acd21f221fad895f80f70e550032004b.web-security-academy.net/post/commentwebsite=
+
+parameter : "https://target-LAB-ID.web-security-academy.net/post" "<script>alert(1)</script>"
